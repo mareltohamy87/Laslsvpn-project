@@ -591,10 +591,6 @@ transition: all ease-in-out 0.2s;
 
 /* _________________________________  A P P L I C A T I O N S     S E C T I O N _________________________________ */
 
-.applications-section {
-  min-width: 580px;
-  height: 208px; 
-}
 
 .applications-section a svg {
 display: block;
@@ -619,12 +615,22 @@ display: block;
  border-radius: 20%;
 }
 
+@media screen and (min-width:900px) {
+  .applications-section .row {
+    justify-content: space-between;
+  }
+  .applications-section {
+    min-width: 580px;
+  }
+  
+}
 
 /*_____________________ H A P P Y    C U S T O M E R   S E C T I O N  __________________ */
 
 .happy-customer-section {
-  padding-top: 350px;
+  padding-top: 170px;
   padding-bottom: 82px;
+  background-color: var(--first-button);
 }
 
 .happy-customer-section .heading-happy-customer {
@@ -831,12 +837,13 @@ display: block;
 
 
 /*_____________________ F O O T E R   S E C T I O N  __________________ */
+
+
 .footer {
   background-color: #F8F8F8;
-  height: 560px;
   position: relative;
   z-index: 1;
-  padding: 183px 150px 100px 150px;
+  padding: 183px 150px 100px;
 }
 
 .footer .paragraph-footer {
@@ -916,4 +923,10 @@ transform: scale(0.7);
 .footer .footer-list a:hover, .engage-list a:hover, .earn-money-list a:hover {
   color: var(--second-button);
   font-weight: 500;
+}
+
+@media screen and (min-width:900px) {
+  .footer {
+  padding-left: 150px;
+  }
 }
