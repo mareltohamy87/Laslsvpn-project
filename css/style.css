@@ -1,0 +1,919 @@
+@import url("./fonts.css");
+@import url("./grid.css");
+
+/* ______________________________G L O B A L_________________________________ */
+
+:root {
+  --font-family: 'Rubik';
+  --heading-color:  #0B132A;
+  --parag-color: #4F5665;
+  --first-button: #ffff;
+  --second-button: #F53838;
+}
+
+/* _______________________________F O N T S_________________________________ */
+.text-black {
+  color: var(--heading-color);
+}
+
+.text-gray {
+  color: var(--parag-color);
+}
+
+.Text-button {
+  color:var(--first-button);
+}
+
+.text-button-2 {
+  color: var(--second-button);
+}
+.font {
+  font-family: var(--font-family);
+}
+
+
+/* _________________________________H E A D E R MARIAM_________________________________ */
+
+.header {
+  background-color: var(--first-button);
+  padding-top:45px;
+}
+
+.div-logo {
+  transition: rotate;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+.logo-img:hover {
+  rotate:180deg;
+}
+
+.header .ul-nav-bar {
+  gap:40px;
+}
+
+.header .ul-nav-bar li a {
+  font-size:16px ;
+  font-weight:400 ;
+  transition: all ease-in-out 0.2s;
+}
+
+.header .ul-nav-bar li a:hover {
+ color:var(--second-button);
+ font-weight: 500;
+}
+
+.header .ul-nav-bar li .active {
+  color:var(--heading-color);
+  font-weight: 500;
+}
+
+.header .header-button> a {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.header .solid-header-button {
+  border-radius: 50px;
+  border: 1px solid var(--second-button);
+  padding:13px 45px;
+  min-width: 150px;
+  transition: all ease-in-out 0.2s;
+}
+
+.header .solid-header-button:hover {
+  color:var(--first-button);
+  background-color: var(--second-button);
+}
+
+.header .outline-header-button {
+  border-radius: 100px;
+  padding:13px 45px;
+  min-width: 150px;
+  transition: all ease-in-out 0.2s;
+}
+
+.header .outline-header-button:hover {
+  color:var(--second-button);
+  border:2px solid var(--heading-color);
+  border-radius: 100px;
+  padding:13px 45px;
+  min-width: 150px;
+}
+
+/*---------- Mobile Sidebar Menu --------*/
+.sidenav {
+  position:fixed;
+  top:0;
+  background-color: var(--first-button);
+  right:-250px;
+  width:250px;
+  height:100vh;
+  z-index: 100;
+  padding: 50px 24px;
+  transition: all ease-in-out 0.3s;
+}
+
+.close-sidebar-butn {
+  position: absolute;
+  top:10px;
+  right:10px;
+  border: 1px solid var(--parag-color);
+  width: 20px;
+  height: 20px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 0.3s;
+}
+
+
+.close-sidebar-butn:hover {
+  background-color: var(--Light-Gray);
+}
+
+.gap-50 {
+  gap:50px;
+}
+
+.overlay {
+  background-color:#2b2b2b85;;
+  width:100vw;
+  height:100vh;
+  position:fixed;
+  top:0;
+  right:0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 100;
+}
+
+#sidebar-active {
+visibility: hidden;
+}
+
+#sidebar-active:checked + .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+#sidebar-active:checked ~ .sidenav {
+  right: 0;
+}
+
+label {
+  cursor:pointer;
+}
+
+
+ 
+/* _________________________________ H E R O  S E C T I O N _________________________________ */
+.hero-section .img-hero {
+  width:100%;
+  height:100%;
+  padding-top: 88px;
+  padding-bottom: 105px;
+}
+
+.hero-section .heading-hero {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 70px;
+  margin-top: 116px;
+  transition:all ease-in-out 0.2s;
+}
+
+.hero-section .heading-hero> span {
+  font-weight: 700;
+}
+
+.hero-section .heading-hero> span:hover {
+  color:var(--second-button);
+  cursor:pointer;
+}
+
+.hero-section .hero-paragraph {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.hero-section .hero-paragraph> span {
+  font-weight: 500;
+  transition:all ease-in-out 0.2s;
+}
+
+.hero-section .hero-paragraph::first-letter {
+  color: var(--second-button);
+  font-style:bold;
+  font-size: x-large;
+}
+
+.hero-section .hero-paragraph> span {
+  color: var(--second-button);
+}
+
+.hero-section .hero-paragraph> span:hover {
+  color: var(--heading-color);
+  cursor:pointer;
+}
+
+.hero-section .hero-button a {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25px;
+  padding:17px 77px;
+  min-width: 250px;
+  border-radius: 10px;
+  background-color:var(--second-button);
+}
+
+.hero-section .hero-solid-button:hover {
+  color:var(--second-button);
+  border: 1px solid var(--second-button);
+  border-radius: 10px;
+  background-color: var(--first-button);
+}
+
+/* _________________________________  U S E R S   S E C T I O N _________________________________ */
+
+.users-section .ul-users-section {
+  border-radius: 10px;
+  background-color: var(--first-button);
+  border: 2px dotted gray;
+  margin-top:103px;   
+  transition: all ease-in-out 0.2s;
+  padding:0px 90px;
+}
+
+.ul-users-section {
+  box-shadow: 10px 10px 20px 10px var(--parag-color);
+  border-radius: 10px;
+  backdrop-filter: blur(57px);
+}
+
+.ul-users-section:hover {
+ border:3px ridge;
+ border-top-color:var(--second-button);
+ border-bottom-color: var(--parag-color);
+ border-left-color:var(--second-button);
+ border-right-color: var(--parag-color);
+ cursor:pointer;
+}
+.users-section .ul-users-section li a {
+  gap:36px;
+}
+
+.users-section li :where(.users-paragraph, .location-paragraph, .server-paragraph) {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  transition: all ease-in-out 0.2s;
+}
+ 
+ 
+.users-section :where(.users-paragraph>span, .location-paragraph>span, .server-paragraph>span) {
+  font-weight: 400;
+  transition: all ease-in-out 0.2s;
+ }
+ 
+ .users-section li :where(.users-paragraph:hover, .location-paragraph:hover, .server-paragraph:hover) {
+  color:var(--second-button);
+ }
+ 
+.users-section :where(.users-paragraph>span:hover, .location-paragraph>span:hover, .server-paragraph>span:hover) {
+ color:var(--second-button);
+}
+
+
+.users-section .users-img {
+  transition: all ease-in-out 0.2s;
+}
+
+.users-section .users-img:hover{
+  transform: scale(1.1);
+}
+
+.users-section .location-users-img:hover {
+  transform: scale(1.1);
+}
+
+.users-section .location-users-img{
+  transition:all ease-in-out 0.2s;
+}
+
+.users-section .server-users-img:hover{
+  transform: scale(1.1);
+}
+
+.users-section .server-users-img {
+  transition: all ease-in-out 0.2s;
+}
+ /*----------- users section responsive ---*/
+@media screen and (min-width:900px) {
+ .users-section .location-li {
+  justify-content: center;
+ }
+  .users-section .users-paragraph {
+    padding-right: 130px;
+  }
+
+  .users-section .location-paragraph {
+    padding-right: 130px;
+  }
+
+  .users-section .server-users-img {
+    padding-left: 90px;
+  }
+  
+  .users-section .server-users-img {
+    padding-left: 90px;
+  }
+  
+  .users-section .location-users-img {
+    padding-left: 100px;
+  }
+ 
+}
+/* _________________________________  F E A T U R E S   S E C T I O N _________________________________ */
+
+.features-section {
+  background-color: var(--first-button);
+}
+
+.features-img {
+  width:100%;
+  height:100%;
+  padding-top: 140px;
+  padding-bottom: 140px;
+  transition: all ease-in-out 0.2s;
+}
+
+.features-section .img-features-section:hover {
+  transform: scale(1.1);
+}
+
+.features-section .features-heading {
+  margin-top: 150px;
+  padding-bottom: 20px;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 50px;
+}
+
+.features-section .features-heading:hover {
+  text-shadow: var(--parag-color);
+  color:var(--second-button);
+  cursor:pointer;
+}
+
+.features-section .features-paragraph {
+  padding-bottom: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.features-section .features-paragraph::first-letter {
+  color:var(--second-button);
+  font-style: bold;
+  font-size: large;
+}
+
+.features-section .ul-features-section {
+  gap:15px;
+}
+
+.features-section .list-feauters-section {
+  font-size: 14px;
+  font-weight:400 ;
+  line-height: 30px;
+  gap:11px;
+}
+
+.features-section .ul-features-section li> svg {
+ transition:all ease-in-out 0.2s;
+}
+
+.features-section .ul-features-section p::first-letter {
+  color:var(--parag-color);
+  font-style: bold;
+  font-size: large;
+}
+
+.features-section .ul-features-section p {
+transition: all ease-in-out 0.2s;
+}
+
+.features-section .ul-features-section p:hover {
+  color:var(--second-button);
+  font-style: bold;
+  font-size: large;
+}
+
+.features-section .ul-features-section li> svg:hover {
+  transform: scale(1.1);
+  cursor:pointer;
+}
+
+
+/* _________________________________C H O O S E   P L A N  S E C T I O N _________________________________ */
+
+.plan-section .item-plan-section {
+  border-radius: 10px;
+  border: 2px solid #DDD;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  margin-top: 60px;
+  margin-bottom: 150px;
+} 
+
+.plan-section .heading-plan-section {
+  font-size: 35px;
+  line-height: 50px;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  transition: all ease-in-out 0.2s;
+}
+
+.plan-section .heading-plan-section:hover {
+  color:var(--second-button);
+  cursor:pointer;
+}
+
+.plan-section p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+}
+
+.plan-section p::first-letter {
+  color:var(--second-button);
+  font-size: large;
+  font-style: bold;
+}
+
+.plan-section h3 {
+  font-size: 18px;
+  line-height: 30px;
+  margin:30px 0;
+  text-align: center;
+}
+
+.plan-section .list-plan-section {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  gap:24px;
+  padding:5px 0;
+}
+
+.plan-section .button-text {
+  font-size: 25px;
+  line-height: 30px;
+  margin-top: 120px;
+  text-align: center;
+}
+
+.plan-section :where(h2, h3) {
+  font-weight: 500;
+}
+
+.plan-section .button-plan-section {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  background-color: var(--first-button);
+  min-width: 177px;
+  padding: 13px 63px;
+  border-radius: 50px;
+  border: 2px solid var(--second-button);
+  margin-top: 20px;
+  transition: all ease-in-out 0.2s;
+}
+
+/*--- hover ---*/
+.plan-section .button-plan-section:hover {
+  color:var(--first-button);
+  background-color: var(--second-button);
+  border-color:var(--first-button) ;
+}
+
+.plan-section .img-plan {
+  transition: all ease-in-out 0.2s;
+}
+
+.plan-section .img-plan:hover {
+  transform: scale(1.1);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.plan-section .item-plan-section {
+  transition: all ease-in-out 0.2s;
+}
+.plan-section .item-plan-section:hover {
+  border-color: var(--second-button);
+  cursor: pointer;
+}
+
+.plan-section :where(.money-text, .money-plan) {
+  font-weight: 400;
+  text-align: center;
+}
+
+.plan-section .money-text {
+  margin-top:80px ;
+}
+
+.plan-section .money-plan {
+  margin-top: 40px ;
+}
+
+/* _________________________________  M A P   S E C T I O N _________________________________ */
+.map-section {
+  margin-bottom: 80px;
+}
+
+.map-section .heading-map-section {
+  font-size:35px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: center;
+  padding-bottom: 20px;
+  transition: all ease-in-out 0.2s;
+}
+
+.map-section .heading-map-section:hover {
+  color:var(--second-button);
+  cursor:pointer;
+}
+
+.map-section .paragraph-map-section {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 155px;
+}
+
+.map-section .paragraph-map-section::first-letter {
+  color:var(--second-button);
+  font-size: x-large;
+  font-style: bold;
+}
+
+.map-section .paragraph-map-section> span {
+  font-weight: 500;
+}
+
+.map-section .img-map-section {
+  width:100%;
+  height:100%;
+  transition: all ease-in-out 0.2s;
+  border-radius: 20%;
+}
+
+.map-section .img-map-section:hover {
+  border: 2px solid;
+  border-bottom-color: var(--heading-color);
+  border-top-color: var(--heading-color);
+  border-left-color:var(--second-button);
+  border-right-color: var(--second-button);
+}
+
+/* _________________________________  A P P L I C A T I O N S     S E C T I O N _________________________________ */
+
+.applications-section {
+  min-width: 580px;
+  height: 208px; 
+}
+
+.applications-section a svg {
+display: block;
+}
+
+.applications-section .netflix-list {
+  transition: all ease-in-out 0.2s;
+}
+
+.applications-section .reddit-list, .amazon-list, .discord-list{
+  transition: all ease-in-out 0.2s;
+}
+
+.applications-section .spotify-list {
+  transition: all ease-in-out 0.2s;
+}
+
+.applications-section ul a>svg:hover {
+ transform: scale(1.1);
+ background-color: lightgray;
+ border:1px solid var(--parag-color);
+ border-radius: 20%;
+}
+
+
+/*_____________________ H A P P Y    C U S T O M E R   S E C T I O N  __________________ */
+
+.happy-customer-section {
+  padding-top: 350px;
+  padding-bottom: 82px;
+}
+
+.happy-customer-section .heading-happy-customer {
+  text-align: center;
+  font-size: 35px ;
+  font-weight: 500;
+  line-height: 50px;
+  transition: all ease-in-out 0.2s;
+}
+
+.highlight {
+ color:var(--second-button);
+}
+
+.highlight:hover {
+  color:var(--heading-color);
+  cursor: pointer;
+}
+
+.happy-customer-section .paragraph-happy-customer {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  transition: all ease-in-out 0.2s;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.happy-customer-section .paragraph-happy-customer::first-letter{
+  color:var(--second-button);
+  font-size: x-large;
+  font-style: bold;
+}
+
+.happy-customer-section .customer:hover {
+  border: 2px solid;
+  border-bottom-color: var(--heading-color);
+  border-top-color: var(--heading-color);
+  border-left-color:var(--second-button);
+  border-right-color: var(--second-button);
+  cursor:pointer;
+}
+
+.happy-customer-section .happy-customer {
+  min-width: 400px;
+  height:260px;
+  border-radius: 10px;
+  border: 2px solid var(--parag-color);
+  background-color: var(--first-button);
+  transition: all ease-in-out 0.2s;
+  flex-wrap: wrap;
+}
+
+.happy-customer-section .happy-customer:hover {
+  border: 2px solid ;
+  border-bottom-color: var(--heading-color);
+  border-top-color: var(--heading-color);
+  border-left-color:var(--second-button);
+  border-right-color: var(--second-button);
+  cursor:pointer;
+}
+
+
+.happy-customer-section .img-customer {
+  padding-left:30px;
+  padding-top: 30px;
+}
+
+.happy-customer-section .customer-name {
+  font-size: 18px;
+  font-weight: 500;
+  padding-left:20px;
+  padding-right: 108px;
+  padding-top: 36px;
+}
+
+.happy-customer-section .span-customer-name {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.happy-customer-section .customer-rate {
+  gap:10px;
+  padding-top: 47px;
+}
+
+.happy-customer-section .customer-review  {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+} 
+
+.happy-customer-section .first {
+  padding: 26px 30px 30px 30px;
+} 
+
+.happy-customer-section .second {
+  padding: 14px 30px 42px 30px;
+} 
+
+.happy-customer-section .third {
+  padding: 9px 30px 47px 30px;
+} 
+
+.happy-customer-section .customer-review::first-letter {
+ color:var(--second-button);
+ font-style: bold;
+ font-size: larger;
+} 
+
+/*_______ arrow section ______ */
+.flex-end {
+  justify-content: flex-end;
+}
+
+.slider{
+  padding-top: 60px;
+}
+ 
+.item-arrows {
+  gap:20px; 
+}
+
+.arrow-right{
+  position: relative;
+  width: 100%;
+}
+
+.circle{
+  fill: #f53838;
+}
+
+.arrow{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+/*_____________________ S U B S C R I B E  S E C T I O N  __________________ */
+.subscribe-section .row{
+  border-radius: 10px;
+  border: 1px solid var(--first-button);
+  background-color: var(--first-button);
+  margin-bottom: -100px;
+  position: relative;
+  z-index: 2;
+}
+
+.subscribe-section .row:hover {
+  border:2px ridge;
+  border-top-color:var(--second-button);
+  border-bottom-color: var(--parag-color);
+  border-left-color:var(--second-button);
+  border-right-color: var(--parag-color);
+  cursor:pointer;
+}
+
+.subscribe-section .heading-subscribe-section {
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 45px; 
+  padding-top: 58px;
+  padding-bottom: 20px;
+}
+
+.subscribe-section .paragraph-subscribe-section {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px; 
+  padding-bottom: 58px;
+}
+
+.subscribe-section .paragraph-subscribe-section::first-letter {
+  color:var(--second-button);
+  font-style: bold;
+  font-size: large;
+}
+
+.subscribe-section .subscribe-button {
+  transition:all ease-in-out .2s;
+  padding-top: 86px;
+  padding-bottom: 86px;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+.subscribe-section .subscribe-button a {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25px;
+  border-radius: 10px;
+  padding: 17.5px 65px;  
+  background-color: var(--second-button);
+  min-width: 250px;
+}
+
+.subscribe-section .subscribe-solid-button:hover {
+  background-color: var(--first-button);
+  color: var(--second-button);
+  border: 1px solid var(--second-button);
+  border-radius: 10px;
+}
+
+
+/*_____________________ F O O T E R   S E C T I O N  __________________ */
+.footer {
+  background-color: #F8F8F8;
+  height: 560px;
+  position: relative;
+  z-index: 1;
+  padding: 183px 150px 100px 150px;
+}
+
+.footer .paragraph-footer {
+  font-size: 16px ;
+  font-weight: 500;
+  line-height: 30px;
+  padding-bottom: 30px;
+}
+
+.paragraph-footer::first-letter {
+color:var(--second-button);
+font-style: bold;
+font-size: larger;
+}
+
+.footer .span-footer {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.footer .footer-icons {
+  gap:10px;
+  margin-left:-20px;
+
+}
+
+.footer .list-footer {
+transition: all ease-in-out 0.2s;
+}
+
+.footer .list-footer:hover {
+transform: scale(0.7);
+}
+
+.footer .footer-list {
+  transition: all ease-in-out 0.2s;
+  padding-left:230px ;
+  padding-right: 126px;
+}
+
+.footer .engage-list {
+  transition: all ease-in-out 0.2s;
+}
+
+.footer .engage-list {
+  transition: all ease-in-out 0.2s;
+}
+
+.footer .earn-money-list {
+  transition: all ease-in-out 0.2s;
+  padding-right: 150pxpx
+}
+
+.footer .heading-footer-list {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  padding-bottom: 10px;
+}
+
+.footer .heading-footer-list:hover {
+ color: var(--second-button);
+ cursor:pointer;
+}
+
+.footer .gap-10 {
+  gap:10px;
+}
+
+.footer :where( .footer-list, .engage-list, .earn-money-list a){
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px; 
+}
+
+.footer .footer-list a:hover, .engage-list a:hover, .earn-money-list a:hover {
+  color: var(--second-button);
+  font-weight: 500;
+}
